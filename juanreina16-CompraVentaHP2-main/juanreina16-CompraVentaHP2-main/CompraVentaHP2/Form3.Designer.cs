@@ -56,6 +56,7 @@
             Lamborghini = new DataGridViewTextBoxColumn();
             Volkswagen = new DataGridViewTextBoxColumn();
             Twingo = new DataGridViewTextBoxColumn();
+            btnvisualizar = new Button();
             ((System.ComponentModel.ISupportInitialize)dtgvproductos).BeginInit();
             SuspendLayout();
             // 
@@ -221,7 +222,7 @@
             // 
             btncomprar.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point);
             btncomprar.ForeColor = Color.FromArgb(0, 192, 0);
-            btncomprar.Location = new Point(424, 92);
+            btncomprar.Location = new Point(425, 67);
             btncomprar.Name = "btncomprar";
             btncomprar.Size = new Size(84, 49);
             btncomprar.TabIndex = 19;
@@ -279,12 +280,25 @@
             Twingo.HeaderText = "Twingo";
             Twingo.Name = "Twingo";
             // 
+            // btnvisualizar
+            // 
+            btnvisualizar.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            btnvisualizar.ForeColor = Color.FromArgb(0, 192, 0);
+            btnvisualizar.Location = new Point(52, 362);
+            btnvisualizar.Name = "btnvisualizar";
+            btnvisualizar.Size = new Size(100, 49);
+            btnvisualizar.TabIndex = 21;
+            btnvisualizar.Text = "Visualizar";
+            btnvisualizar.UseVisualStyleBackColor = true;
+            btnvisualizar.Click += btnvisualizar_Click;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(734, 445);
+            Controls.Add(btnvisualizar);
             Controls.Add(dtgvproductos);
             Controls.Add(btncomprar);
             Controls.Add(lbimpresion);
@@ -319,22 +333,13 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox txtnom;
-        private TextBox txtape;
-        private TextBox txtdoc;
-        private TextBox txtfono;
         private Label label5;
         private CheckBox checkBox1;
         private CheckBox checkBox2;
         private CheckBox checkBox3;
         private CheckBox checkBox4;
-        private TextBox txtferrari;
-        private TextBox txtlam;
-        private TextBox txtvol;
-        private TextBox txtgo;
         private Label lbimpresion;
         private Button btncomprar;
-        private DataGridView dtgvproductos;
         private DataGridViewTextBoxColumn Nombre;
         private DataGridViewTextBoxColumn Apellido;
         private DataGridViewTextBoxColumn Documento;
@@ -343,5 +348,15 @@
         private DataGridViewTextBoxColumn Lamborghini;
         private DataGridViewTextBoxColumn Volkswagen;
         private DataGridViewTextBoxColumn Twingo;
+        public Button btnvisualizar;
+        public DataGridView dtgvproductos;
+        public TextBox txtnom;
+        public TextBox txtape;
+        public TextBox txtdoc;
+        public TextBox txtfono;
+        public TextBox txtferrari;
+        public TextBox txtlam;
+        public TextBox txtvol;
+        public TextBox txtgo;
     }
 }

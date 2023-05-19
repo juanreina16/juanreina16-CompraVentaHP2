@@ -30,23 +30,21 @@
         {
             label1 = new Label();
             fff = new ListBox();
-            txtferrari = new TextBox();
-            txtlambo = new TextBox();
-            txtvol = new TextBox();
-            txtgo = new TextBox();
+            txtfer = new TextBox();
+            txtlam = new TextBox();
+            txtvolk = new TextBox();
+            txttwi = new TextBox();
             label2 = new Label();
-            btnfac = new Button();
-            dtgvproductos = new DataGridView();
-            Nombre = new DataGridViewTextBoxColumn();
-            Apellido = new DataGridViewTextBoxColumn();
-            Documento = new DataGridViewTextBoxColumn();
-            Telefono = new DataGridViewTextBoxColumn();
-            Ferrari = new DataGridViewTextBoxColumn();
-            Lamborghini = new DataGridViewTextBoxColumn();
-            Volkswagen = new DataGridViewTextBoxColumn();
-            Twingo = new DataGridViewTextBoxColumn();
             lbimpresion = new Label();
-            ((System.ComponentModel.ISupportInitialize)dtgvproductos).BeginInit();
+            txtnom2 = new TextBox();
+            txtape2 = new TextBox();
+            txtdoc2 = new TextBox();
+            txtfono2 = new TextBox();
+            txtferrari2 = new TextBox();
+            txtlam2 = new TextBox();
+            txtvol2 = new TextBox();
+            txtgo2 = new TextBox();
+            btncerrar = new Button();
             SuspendLayout();
             // 
             // label1
@@ -73,33 +71,33 @@
             fff.TabIndex = 2;
             fff.SelectedIndexChanged += fff_SelectedIndexChanged;
             // 
-            // txtferrari
+            // txtfer
             // 
-            txtferrari.Location = new Point(179, 88);
-            txtferrari.Name = "txtferrari";
-            txtferrari.Size = new Size(47, 23);
-            txtferrari.TabIndex = 3;
+            txtfer.Location = new Point(179, 88);
+            txtfer.Name = "txtfer";
+            txtfer.Size = new Size(47, 23);
+            txtfer.TabIndex = 3;
             // 
-            // txtlambo
+            // txtlam
             // 
-            txtlambo.Location = new Point(179, 135);
-            txtlambo.Name = "txtlambo";
-            txtlambo.Size = new Size(47, 23);
-            txtlambo.TabIndex = 4;
+            txtlam.Location = new Point(179, 135);
+            txtlam.Name = "txtlam";
+            txtlam.Size = new Size(47, 23);
+            txtlam.TabIndex = 4;
             // 
-            // txtvol
+            // txtvolk
             // 
-            txtvol.Location = new Point(179, 178);
-            txtvol.Name = "txtvol";
-            txtvol.Size = new Size(47, 23);
-            txtvol.TabIndex = 5;
+            txtvolk.Location = new Point(179, 178);
+            txtvolk.Name = "txtvolk";
+            txtvolk.Size = new Size(47, 23);
+            txtvolk.TabIndex = 5;
             // 
-            // txtgo
+            // txttwi
             // 
-            txtgo.Location = new Point(179, 219);
-            txtgo.Name = "txtgo";
-            txtgo.Size = new Size(47, 23);
-            txtgo.TabIndex = 6;
+            txttwi.Location = new Point(179, 219);
+            txttwi.Name = "txttwi";
+            txttwi.Size = new Size(47, 23);
+            txttwi.TabIndex = 6;
             // 
             // label2
             // 
@@ -111,68 +109,6 @@
             label2.TabIndex = 7;
             label2.Text = "Mostrador de facturas";
             // 
-            // btnfac
-            // 
-            btnfac.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            btnfac.ForeColor = Color.FromArgb(0, 192, 0);
-            btnfac.Location = new Point(651, 62);
-            btnfac.Name = "btnfac";
-            btnfac.Size = new Size(84, 49);
-            btnfac.TabIndex = 20;
-            btnfac.Text = "Factura";
-            btnfac.UseVisualStyleBackColor = true;
-            btnfac.Click += btnfac_Click;
-            // 
-            // dtgvproductos
-            // 
-            dtgvproductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvproductos.Columns.AddRange(new DataGridViewColumn[] { Nombre, Apellido, Documento, Telefono, Ferrari, Lamborghini, Volkswagen, Twingo });
-            dtgvproductos.Location = new Point(281, 142);
-            dtgvproductos.Name = "dtgvproductos";
-            dtgvproductos.RowTemplate.Height = 25;
-            dtgvproductos.Size = new Size(504, 219);
-            dtgvproductos.TabIndex = 22;
-            // 
-            // Nombre
-            // 
-            Nombre.HeaderText = "Nombre";
-            Nombre.Name = "Nombre";
-            // 
-            // Apellido
-            // 
-            Apellido.HeaderText = "Apellido";
-            Apellido.Name = "Apellido";
-            // 
-            // Documento
-            // 
-            Documento.HeaderText = "Documento";
-            Documento.Name = "Documento";
-            // 
-            // Telefono
-            // 
-            Telefono.HeaderText = "Telefono";
-            Telefono.Name = "Telefono";
-            // 
-            // Ferrari
-            // 
-            Ferrari.HeaderText = "Ferrari";
-            Ferrari.Name = "Ferrari";
-            // 
-            // Lamborghini
-            // 
-            Lamborghini.HeaderText = "Lamborghini";
-            Lamborghini.Name = "Lamborghini";
-            // 
-            // Volkswagen
-            // 
-            Volkswagen.HeaderText = "Volkswagen";
-            Volkswagen.Name = "Volkswagen";
-            // 
-            // Twingo
-            // 
-            Twingo.HeaderText = "Twingo";
-            Twingo.Name = "Twingo";
-            // 
             // lbimpresion
             // 
             lbimpresion.AutoSize = true;
@@ -181,26 +117,100 @@
             lbimpresion.Size = new Size(0, 15);
             lbimpresion.TabIndex = 21;
             // 
+            // txtnom2
+            // 
+            txtnom2.Location = new Point(368, 88);
+            txtnom2.Name = "txtnom2";
+            txtnom2.Size = new Size(200, 23);
+            txtnom2.TabIndex = 22;
+            // 
+            // txtape2
+            // 
+            txtape2.Location = new Point(368, 135);
+            txtape2.Name = "txtape2";
+            txtape2.Size = new Size(200, 23);
+            txtape2.TabIndex = 23;
+            // 
+            // txtdoc2
+            // 
+            txtdoc2.Location = new Point(368, 178);
+            txtdoc2.Name = "txtdoc2";
+            txtdoc2.Size = new Size(200, 23);
+            txtdoc2.TabIndex = 24;
+            // 
+            // txtfono2
+            // 
+            txtfono2.Location = new Point(368, 219);
+            txtfono2.Name = "txtfono2";
+            txtfono2.Size = new Size(200, 23);
+            txtfono2.TabIndex = 25;
+            // 
+            // txtferrari2
+            // 
+            txtferrari2.Location = new Point(368, 263);
+            txtferrari2.Name = "txtferrari2";
+            txtferrari2.Size = new Size(200, 23);
+            txtferrari2.TabIndex = 26;
+            // 
+            // txtlam2
+            // 
+            txtlam2.Location = new Point(368, 303);
+            txtlam2.Name = "txtlam2";
+            txtlam2.Size = new Size(200, 23);
+            txtlam2.TabIndex = 27;
+            // 
+            // txtvol2
+            // 
+            txtvol2.Location = new Point(368, 344);
+            txtvol2.Name = "txtvol2";
+            txtvol2.Size = new Size(200, 23);
+            txtvol2.TabIndex = 28;
+            // 
+            // txtgo2
+            // 
+            txtgo2.Location = new Point(368, 382);
+            txtgo2.Name = "txtgo2";
+            txtgo2.Size = new Size(200, 23);
+            txtgo2.TabIndex = 29;
+            // 
+            // btncerrar
+            // 
+            btncerrar.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            btncerrar.ForeColor = Color.FromArgb(0, 192, 0);
+            btncerrar.Location = new Point(645, 237);
+            btncerrar.Name = "btncerrar";
+            btncerrar.Size = new Size(84, 49);
+            btncerrar.TabIndex = 30;
+            btncerrar.Text = "Cerrar";
+            btncerrar.UseVisualStyleBackColor = true;
+            btncerrar.Click += btncerrar_Click;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
-            ClientSize = new Size(793, 365);
-            Controls.Add(dtgvproductos);
+            ClientSize = new Size(793, 434);
+            Controls.Add(btncerrar);
+            Controls.Add(txtgo2);
+            Controls.Add(txtvol2);
+            Controls.Add(txtlam2);
+            Controls.Add(txtferrari2);
+            Controls.Add(txtfono2);
+            Controls.Add(txtdoc2);
+            Controls.Add(txtape2);
+            Controls.Add(txtnom2);
             Controls.Add(lbimpresion);
-            Controls.Add(btnfac);
             Controls.Add(label2);
-            Controls.Add(txtgo);
-            Controls.Add(txtvol);
-            Controls.Add(txtlambo);
-            Controls.Add(txtferrari);
+            Controls.Add(txttwi);
+            Controls.Add(txtvolk);
+            Controls.Add(txtlam);
+            Controls.Add(txtfer);
             Controls.Add(fff);
             Controls.Add(label1);
             Name = "Form4";
             Text = "Form4";
             Load += Form4_Load;
-            ((System.ComponentModel.ISupportInitialize)dtgvproductos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -208,21 +218,20 @@
         #endregion
         private Label label1;
         private ListBox fff;
-        private TextBox txtferrari;
-        private TextBox txtlambo;
-        private TextBox txtvol;
-        private TextBox txtgo;
+        private TextBox txtfer;
+        private TextBox txtlam;
+        private TextBox txtvolk;
+        private TextBox txttwi;
         private Label label2;
-        private Button btnfac;
-        private DataGridView dtgvproductos;
-        private DataGridViewTextBoxColumn Nombre;
-        private DataGridViewTextBoxColumn Apellido;
-        private DataGridViewTextBoxColumn Documento;
-        private DataGridViewTextBoxColumn Telefono;
-        private DataGridViewTextBoxColumn Ferrari;
-        private DataGridViewTextBoxColumn Lamborghini;
-        private DataGridViewTextBoxColumn Volkswagen;
-        private DataGridViewTextBoxColumn Twingo;
         private Label lbimpresion;
+        public TextBox txtnom2;
+        public TextBox txtape2;
+        public TextBox txtdoc2;
+        public TextBox txtfono2;
+        public TextBox txtferrari2;
+        public TextBox txtlam2;
+        public TextBox txtvol2;
+        public TextBox txtgo2;
+        private Button btncerrar;
     }
 }

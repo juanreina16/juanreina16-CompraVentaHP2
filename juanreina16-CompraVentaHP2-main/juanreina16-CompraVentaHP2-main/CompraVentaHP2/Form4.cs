@@ -38,10 +38,9 @@ namespace CompraVentaHP2
 
         }
 
-        private void btnfac_Click(object sender, EventArgs e)
+        private void btncerrar_Click(object sender, EventArgs e)
         {
-            int n = dtgvproductos.Rows.Add();
-
+            this.Close();
         }
     }
 }

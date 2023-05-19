@@ -66,5 +66,22 @@ namespace CompraVentaHP2
 
             }
         }
+
+        private void btnvisualizar_Click(object sender, EventArgs e)
+        {
+            Form4 ob = new Form4();
+
+            ob.txtnom2.Text = txtnom.Text;
+            ob.txtape2.Text = txtape.Text;
+            ob.txtdoc2.Text = txtdoc.Text;
+            ob.txtfono2.Text = txtfono.Text;
+            ob.txtferrari2.Text = txtferrari.Text;
+            ob.txtlam2.Text = txtlam.Text;
+            ob.txtvol2.Text = txtvol.Text;
+            ob.txtgo2.Text = txtgo.Text;
+
+            ob.Show();
+
+        }
     }
 }
