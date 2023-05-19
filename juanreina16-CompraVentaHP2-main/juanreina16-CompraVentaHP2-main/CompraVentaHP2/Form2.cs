@@ -15,62 +15,66 @@ namespace CompraVentaHP2
         public Form2()
         {
             InitializeComponent();
+            MessageBox.Show("Tienes solo 3 intentos (la seguridad de nuestros usuarios es primero)");
         }
+        int intentos = 0;
+
 
         private void btningresar_Click(object sender, EventArgs e)
         {
             Form4 condicion2 = new Form4();
 
-            int intentos = 0;
+
+
+
+            intentos++;
             if (txtusu.Text == "David69")
             {
-
-
-
                 if (txtcontra.Text == "1122")
                 {
                     txtcontra.Text = " ";
                     txtusu.Text = " ";
                     condicion2.Show();
+                    Hide();
                 }
-
                 else
                 {
                     txtcontra.Text = " ";
                     txtusu.Text = " ";
                     MessageBox.Show("El usuario o la contraseña incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    intentos++;
                 }
             }
-
             else
             {
                 txtcontra.Text = " ";
                 txtusu.Text = " ";
                 MessageBox.Show("El usuario o la contraseña incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-                intentos++;
-
             }
-
-            if (intentos > 3)
+            if (string.IsNullOrEmpty(txtusu.Text) && string.IsNullOrEmpty(txtcontra.Text))
             {
-
-                MessageBox.Show("Ha superado el límite de intentos, por favor coma mierda.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, ingrese un usuario y contraseña.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (intentos == 3)
+            {
+                MessageBox.Show("Ha superado el límite de intentos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtusu.Text = " ";
                 txtcontra.Text = " ";
+                this.Close();
             }
-            else
-            {
-
-            }
-
 
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            Form1 condicion1 = new Form1();
+            condicion1.Show();
+            Hide();
         }
     }
 }

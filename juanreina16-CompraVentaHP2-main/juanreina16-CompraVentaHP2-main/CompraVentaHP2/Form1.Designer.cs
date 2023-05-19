@@ -31,6 +31,7 @@
             label1 = new Label();
             btnusu = new Button();
             btnadmin = new Button();
+            btncerrar = new Button();
             SuspendLayout();
             // 
             // label1
@@ -75,12 +76,25 @@
             btnadmin.UseVisualStyleBackColor = false;
             btnadmin.Click += btnadmin_Click;
             // 
+            // btncerrar
+            // 
+            btncerrar.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            btncerrar.ForeColor = Color.FromArgb(0, 192, 0);
+            btncerrar.Location = new Point(12, 240);
+            btncerrar.Name = "btncerrar";
+            btncerrar.Size = new Size(75, 27);
+            btncerrar.TabIndex = 31;
+            btncerrar.Text = "Cerrar";
+            btncerrar.UseVisualStyleBackColor = true;
+            btncerrar.Click += btncerrar_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DimGray;
             ClientSize = new Size(424, 279);
+            Controls.Add(btncerrar);
             Controls.Add(btnadmin);
             Controls.Add(btnusu);
             Controls.Add(label1);
@@ -97,5 +111,6 @@
         private Label label1;
         private Button btnusu;
         private Button btnadmin;
+        private Button btncerrar;
     }
 }

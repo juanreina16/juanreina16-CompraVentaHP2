@@ -41,7 +41,7 @@
             checkBox2 = new CheckBox();
             checkBox3 = new CheckBox();
             checkBox4 = new CheckBox();
-            txtferrari = new TextBox();
+            txtCantidad = new TextBox();
             txtlam = new TextBox();
             txtvol = new TextBox();
             txtgo = new TextBox();
@@ -54,9 +54,18 @@
             Telefono = new DataGridViewTextBoxColumn();
             Ferrari = new DataGridViewTextBoxColumn();
             Lamborghini = new DataGridViewTextBoxColumn();
-            Volkswagen = new DataGridViewTextBoxColumn();
-            Twingo = new DataGridViewTextBoxColumn();
+            Precioo = new DataGridViewTextBoxColumn();
+            Pago = new DataGridViewTextBoxColumn();
             btnvisualizar = new Button();
+            btnExport = new Button();
+            cboProducto = new ComboBox();
+            lblResultado = new Label();
+            lblFecha = new Label();
+            rdAmerican = new RadioButton();
+            rdGana = new RadioButton();
+            label6 = new Label();
+            cboTipo = new ComboBox();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)dtgvproductos).BeginInit();
             SuspendLayout();
             // 
@@ -142,7 +151,7 @@
             // 
             checkBox1.AutoSize = true;
             checkBox1.Font = new Font("Mongolian Baiti", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            checkBox1.Location = new Point(178, 70);
+            checkBox1.Location = new Point(632, 97);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(72, 20);
             checkBox1.TabIndex = 9;
@@ -153,7 +162,7 @@
             // 
             checkBox2.AutoSize = true;
             checkBox2.Font = new Font("Mongolian Baiti", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            checkBox2.Location = new Point(178, 96);
+            checkBox2.Location = new Point(632, 123);
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new Size(108, 20);
             checkBox2.TabIndex = 10;
@@ -164,7 +173,7 @@
             // 
             checkBox3.AutoSize = true;
             checkBox3.Font = new Font("Mongolian Baiti", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            checkBox3.Location = new Point(178, 122);
+            checkBox3.Location = new Point(632, 149);
             checkBox3.Name = "checkBox3";
             checkBox3.Size = new Size(106, 20);
             checkBox3.TabIndex = 11;
@@ -175,37 +184,37 @@
             // 
             checkBox4.AutoSize = true;
             checkBox4.Font = new Font("Mongolian Baiti", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox4.Location = new Point(178, 146);
+            checkBox4.Location = new Point(632, 173);
             checkBox4.Name = "checkBox4";
             checkBox4.Size = new Size(76, 20);
             checkBox4.TabIndex = 12;
             checkBox4.Text = "Twingo";
             checkBox4.UseVisualStyleBackColor = true;
             // 
-            // txtferrari
+            // txtCantidad
             // 
-            txtferrari.Location = new Point(300, 70);
-            txtferrari.Name = "txtferrari";
-            txtferrari.Size = new Size(94, 23);
-            txtferrari.TabIndex = 13;
+            txtCantidad.Location = new Point(186, 168);
+            txtCantidad.Name = "txtCantidad";
+            txtCantidad.Size = new Size(94, 23);
+            txtCantidad.TabIndex = 13;
             // 
             // txtlam
             // 
-            txtlam.Location = new Point(300, 95);
+            txtlam.Location = new Point(533, 107);
             txtlam.Name = "txtlam";
             txtlam.Size = new Size(94, 23);
             txtlam.TabIndex = 14;
             // 
             // txtvol
             // 
-            txtvol.Location = new Point(300, 120);
+            txtvol.Location = new Point(533, 143);
             txtvol.Name = "txtvol";
             txtvol.Size = new Size(94, 23);
             txtvol.TabIndex = 15;
             // 
             // txtgo
             // 
-            txtgo.Location = new Point(300, 144);
+            txtgo.Location = new Point(533, 175);
             txtgo.Name = "txtgo";
             txtgo.Size = new Size(94, 23);
             txtgo.TabIndex = 16;
@@ -213,7 +222,7 @@
             // lbimpresion
             // 
             lbimpresion.AutoSize = true;
-            lbimpresion.Location = new Point(201, 204);
+            lbimpresion.Location = new Point(376, 169);
             lbimpresion.Name = "lbimpresion";
             lbimpresion.Size = new Size(0, 15);
             lbimpresion.TabIndex = 17;
@@ -222,9 +231,9 @@
             // 
             btncomprar.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point);
             btncomprar.ForeColor = Color.FromArgb(0, 192, 0);
-            btncomprar.Location = new Point(425, 67);
+            btncomprar.Location = new Point(776, 122);
             btncomprar.Name = "btncomprar";
-            btncomprar.Size = new Size(84, 49);
+            btncomprar.Size = new Size(81, 60);
             btncomprar.TabIndex = 19;
             btncomprar.Text = "Comprar";
             btncomprar.UseVisualStyleBackColor = true;
@@ -233,11 +242,11 @@
             // dtgvproductos
             // 
             dtgvproductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvproductos.Columns.AddRange(new DataGridViewColumn[] { Nombre, Apellido, Documento, Telefono, Ferrari, Lamborghini, Volkswagen, Twingo });
-            dtgvproductos.Location = new Point(178, 192);
+            dtgvproductos.Columns.AddRange(new DataGridViewColumn[] { Nombre, Apellido, Documento, Telefono, Ferrari, Lamborghini, Precioo, Pago });
+            dtgvproductos.Location = new Point(-1, 274);
             dtgvproductos.Name = "dtgvproductos";
             dtgvproductos.RowTemplate.Height = 25;
-            dtgvproductos.Size = new Size(504, 219);
+            dtgvproductos.Size = new Size(898, 210);
             dtgvproductos.TabIndex = 20;
             // 
             // Nombre
@@ -262,42 +271,141 @@
             // 
             // Ferrari
             // 
-            Ferrari.HeaderText = "Ferrari";
+            Ferrari.HeaderText = "Vehiculo";
             Ferrari.Name = "Ferrari";
             // 
             // Lamborghini
             // 
-            Lamborghini.HeaderText = "Lamborghini";
+            Lamborghini.HeaderText = "Cantidad";
             Lamborghini.Name = "Lamborghini";
             // 
-            // Volkswagen
+            // Precioo
             // 
-            Volkswagen.HeaderText = "Volkswagen";
-            Volkswagen.Name = "Volkswagen";
+            Precioo.HeaderText = "Total";
+            Precioo.Name = "Precioo";
             // 
-            // Twingo
+            // Pago
             // 
-            Twingo.HeaderText = "Twingo";
-            Twingo.Name = "Twingo";
+            Pago.HeaderText = "Metodo de pago";
+            Pago.Name = "Pago";
             // 
             // btnvisualizar
             // 
             btnvisualizar.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            btnvisualizar.ForeColor = Color.FromArgb(0, 192, 0);
-            btnvisualizar.Location = new Point(52, 362);
+            btnvisualizar.ForeColor = Color.FromArgb(192, 0, 192);
+            btnvisualizar.Location = new Point(757, 41);
             btnvisualizar.Name = "btnvisualizar";
             btnvisualizar.Size = new Size(100, 49);
             btnvisualizar.TabIndex = 21;
-            btnvisualizar.Text = "Visualizar";
+            btnvisualizar.Text = "Ver inventario";
             btnvisualizar.UseVisualStyleBackColor = true;
             btnvisualizar.Click += btnvisualizar_Click;
+            // 
+            // btnExport
+            // 
+            btnExport.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            btnExport.ForeColor = Color.Blue;
+            btnExport.Location = new Point(697, 220);
+            btnExport.Name = "btnExport";
+            btnExport.Size = new Size(179, 33);
+            btnExport.TabIndex = 22;
+            btnExport.Text = "Imprimir factura/s";
+            btnExport.UseVisualStyleBackColor = true;
+            btnExport.Click += btnExport_Click;
+            // 
+            // cboProducto
+            // 
+            cboProducto.FormattingEnabled = true;
+            cboProducto.Items.AddRange(new object[] { "Ferrari", "Lamborghini", "Volkswagen", "Twingo" });
+            cboProducto.Location = new Point(172, 67);
+            cboProducto.Name = "cboProducto";
+            cboProducto.Size = new Size(121, 23);
+            cboProducto.TabIndex = 23;
+            // 
+            // lblResultado
+            // 
+            lblResultado.AutoSize = true;
+            lblResultado.Location = new Point(299, 75);
+            lblResultado.Name = "lblResultado";
+            lblResultado.Size = new Size(40, 15);
+            lblResultado.TabIndex = 24;
+            lblResultado.Text = "Precio";
+            lblResultado.Click += lblPrecio_Click;
+            // 
+            // lblFecha
+            // 
+            lblFecha.AutoSize = true;
+            lblFecha.Location = new Point(12, 9);
+            lblFecha.Name = "lblFecha";
+            lblFecha.Size = new Size(38, 15);
+            lblFecha.TabIndex = 25;
+            lblFecha.Text = "label6";
+            // 
+            // rdAmerican
+            // 
+            rdAmerican.AutoSize = true;
+            rdAmerican.Location = new Point(376, 148);
+            rdAmerican.Name = "rdAmerican";
+            rdAmerican.Size = new Size(118, 19);
+            rdAmerican.TabIndex = 26;
+            rdAmerican.TabStop = true;
+            rdAmerican.Text = "American Express";
+            rdAmerican.UseVisualStyleBackColor = true;
+            // 
+            // rdGana
+            // 
+            rdGana.AutoSize = true;
+            rdGana.Location = new Point(376, 173);
+            rdGana.Name = "rdGana";
+            rdGana.Size = new Size(52, 19);
+            rdGana.TabIndex = 27;
+            rdGana.TabStop = true;
+            rdGana.Text = "Gana";
+            rdGana.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(199, 143);
+            label6.Name = "label6";
+            label6.Size = new Size(55, 15);
+            label6.TabIndex = 28;
+            label6.Text = "Cantidad";
+            // 
+            // cboTipo
+            // 
+            cboTipo.FormattingEnabled = true;
+            cboTipo.Items.AddRange(new object[] { "Amarillo", "Azul", "Rojo", "Atletico Nacional", "Deportivo Pasto" });
+            cboTipo.Location = new Point(395, 67);
+            cboTipo.Name = "cboTipo";
+            cboTipo.Size = new Size(121, 23);
+            cboTipo.TabIndex = 29;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Mongolian Baiti", 14.25F, FontStyle.Italic, GraphicsUnit.Point);
+            label7.Location = new Point(395, 38);
+            label7.Name = "label7";
+            label7.Size = new Size(63, 20);
+            label7.TabIndex = 30;
+            label7.Text = "Diseño";
             // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
-            ClientSize = new Size(734, 445);
+            ClientSize = new Size(888, 466);
+            Controls.Add(label7);
+            Controls.Add(cboTipo);
+            Controls.Add(label6);
+            Controls.Add(rdGana);
+            Controls.Add(rdAmerican);
+            Controls.Add(lblFecha);
+            Controls.Add(lblResultado);
+            Controls.Add(cboProducto);
+            Controls.Add(btnExport);
             Controls.Add(btnvisualizar);
             Controls.Add(dtgvproductos);
             Controls.Add(btncomprar);
@@ -305,7 +413,7 @@
             Controls.Add(txtgo);
             Controls.Add(txtvol);
             Controls.Add(txtlam);
-            Controls.Add(txtferrari);
+            Controls.Add(txtCantidad);
             Controls.Add(checkBox4);
             Controls.Add(checkBox3);
             Controls.Add(checkBox2);
@@ -340,14 +448,6 @@
         private CheckBox checkBox4;
         private Label lbimpresion;
         private Button btncomprar;
-        private DataGridViewTextBoxColumn Nombre;
-        private DataGridViewTextBoxColumn Apellido;
-        private DataGridViewTextBoxColumn Documento;
-        private DataGridViewTextBoxColumn Telefono;
-        private DataGridViewTextBoxColumn Ferrari;
-        private DataGridViewTextBoxColumn Lamborghini;
-        private DataGridViewTextBoxColumn Volkswagen;
-        private DataGridViewTextBoxColumn Twingo;
         public Button btnvisualizar;
         public DataGridView dtgvproductos;
         public TextBox txtnom;
@@ -358,5 +458,24 @@
         public TextBox txtlam;
         public TextBox txtvol;
         public TextBox txtgo;
+        private Button btnExport;
+        private ComboBox cboProducto;
+        private Label lblPrecio;
+        private Label lblFecha;
+        private RadioButton rdAmerican;
+        private RadioButton rdGana;
+        private DataGridViewTextBoxColumn Nombre;
+        private DataGridViewTextBoxColumn Apellido;
+        private DataGridViewTextBoxColumn Documento;
+        private DataGridViewTextBoxColumn Telefono;
+        private DataGridViewTextBoxColumn Ferrari;
+        private DataGridViewTextBoxColumn Lamborghini;
+        private DataGridViewTextBoxColumn Precioo;
+        private DataGridViewTextBoxColumn Pago;
+        public TextBox txtCantidad;
+        private Label label6;
+        private ComboBox cboTipo;
+        private Label label7;
+        private Label lblResultado;
     }
 }

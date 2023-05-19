@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Office.Interop.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+
 
 namespace CompraVentaHP2
 {
@@ -17,17 +26,15 @@ namespace CompraVentaHP2
         double[] ventasTotales, ganancia;
         int N = 2, f, C = 0;
         string N1, N2, N3, N4;
-
-
         int C2 = 0;
 
+       
 
         public Form4()
         {
             InitializeComponent();
         }
-
-
+        
         private void fff_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -42,5 +49,15 @@ namespace CompraVentaHP2
         {
             this.Close();
         }
+
+
+        private void btnImportar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+   
+    
 }
+
+

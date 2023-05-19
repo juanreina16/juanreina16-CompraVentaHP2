@@ -45,6 +45,7 @@
             txtvol2 = new TextBox();
             txtgo2 = new TextBox();
             btncerrar = new Button();
+            btnImportar = new Button();
             SuspendLayout();
             // 
             // label1
@@ -176,8 +177,8 @@
             // btncerrar
             // 
             btncerrar.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            btncerrar.ForeColor = Color.FromArgb(0, 192, 0);
-            btncerrar.Location = new Point(645, 237);
+            btncerrar.ForeColor = Color.Red;
+            btncerrar.Location = new Point(664, 356);
             btncerrar.Name = "btncerrar";
             btncerrar.Size = new Size(84, 49);
             btncerrar.TabIndex = 30;
@@ -185,12 +186,25 @@
             btncerrar.UseVisualStyleBackColor = true;
             btncerrar.Click += btncerrar_Click;
             // 
+            // btnImportar
+            // 
+            btnImportar.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            btnImportar.ForeColor = Color.Blue;
+            btnImportar.Location = new Point(51, 329);
+            btnImportar.Name = "btnImportar";
+            btnImportar.Size = new Size(157, 49);
+            btnImportar.TabIndex = 31;
+            btnImportar.Text = "Ver facturas";
+            btnImportar.UseVisualStyleBackColor = true;
+            btnImportar.Click += btnImportar_Click;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(793, 434);
+            Controls.Add(btnImportar);
             Controls.Add(btncerrar);
             Controls.Add(txtgo2);
             Controls.Add(txtvol2);
@@ -233,5 +247,6 @@
         public TextBox txtvol2;
         public TextBox txtgo2;
         private Button btncerrar;
+        private Button btnImportar;
     }
 }
